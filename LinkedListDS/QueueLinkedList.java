@@ -45,5 +45,32 @@ public class QueueLinkedList {
             temp = temp.next;
         }
     }
+    public boolean isSorted(){
+        Node temp = head;
 
+        while(temp.next != null){
+            Node next = temp.next;
+            if(temp.data > next.data){
+                return false;
+            }
+            temp = temp.next;
+        }
+        return true;
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public void setHead(Node head) {
+        this.head = head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
+    public void setTail(Node tail) {
+        this.tail = tail;
+    }
 }
