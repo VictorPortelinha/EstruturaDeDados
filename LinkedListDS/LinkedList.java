@@ -20,7 +20,6 @@ public class LinkedList {
         Node newNode = new Node(data);
         if(head == null){
             head = newNode;
-
         }else{
             Node temp = head; // criando um Node temporário para percorrer a linked List
             while(temp.next != null){
