@@ -9,18 +9,9 @@ public class Main {
         queue1.enqueue(2);
 
 
-
-
-        System.out.println("Queue 1: Ordenada ");
         queue1.BubbleSort();
 
         queue1.show();
-
-
-
-
-
-
 
 
     }

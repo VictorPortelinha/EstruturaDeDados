@@ -1,4 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
 
 public class QueueLinkedList {
     Node head,tail;
@@ -67,7 +66,6 @@ public class QueueLinkedList {
                 // 2>1, então trocar os Nós de lugar
                 if(temp.data > temp.next.data){
                     int aux = temp.next.data;
-                    System.out.println("Dado: "+aux);
                     temp.next.data = temp.data;
                     temp.data = aux;
                 }
