@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class QueueLinkedList {
     Node head,tail;
 
@@ -45,17 +47,36 @@ public class QueueLinkedList {
             temp = temp.next;
         }
     }
-    public boolean isSorted(){
-        Node temp = head;
+    
 
-        while(temp.next != null){
-            Node next = temp.next;
-            if(temp.data > next.data){
-                return false;
-            }
-            temp = temp.next;
+
+    public void BubbleSort(){
+        if (head == null){
+            System.out.println("Fila vazia");
+            return;
         }
-        return true;
+        Node countQ = head;
+        int size = 0;
+        while (countQ != null){
+            size++;
+            countQ = countQ.next;
+        }
+        for(int i=0;i<size;i++){
+            Node temp = head;
+            while(temp.next != null){
+                // 2>1, então trocar os Nós de lugar
+                if(temp.data > temp.next.data){
+                    int aux = temp.next.data;
+                    System.out.println("Dado: "+aux);
+                    temp.next.data = temp.data;
+                    temp.data = aux;
+                }
+                temp = temp.next;
+            }
+        }
+
+
+
     }
 
     public Node getHead() {
@@ -72,5 +93,6 @@ public class QueueLinkedList {
 
     public void setTail(Node tail) {
         this.tail = tail;
+
     }
 }

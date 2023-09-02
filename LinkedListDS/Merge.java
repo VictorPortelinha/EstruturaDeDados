@@ -2,10 +2,6 @@ public class Merge {
 
     public static QueueLinkedList MergeQueue(QueueLinkedList queue1, QueueLinkedList queue2){
         QueueLinkedList mergedQueue = new QueueLinkedList();
-        if(!queue1.isSorted() || !queue2.isSorted()){
-            System.out.println("Ordene as filas antes de começar a operação de merge");
-            return null;
-        }
 
         // Copiando todos os dados da primeira fila para o merge
         QueueLinkedList.Node temp = queue1.getHead();
@@ -18,6 +14,20 @@ public class Merge {
 
         return mergedQueue;
 
+    }
+
+    public static int[] MergeArray(int[]arr1,int[]arr2){
+        int size = arr1.length + arr2.length;
+        int[] mergedArray = new int[size];
+        for(int i=0;i<arr1.length;i++){
+            mergedArray[i] = arr1[i];
+        }
+        int c=0;
+        for(int j=arr1.length;j<size;j++){
+            mergedArray[j] = arr2[c];
+            c++;
+        }
+        return mergedArray;
     }
 
 
