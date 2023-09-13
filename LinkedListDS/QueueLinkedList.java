@@ -35,16 +35,19 @@ public class QueueLinkedList {
             System.out.println("Fila vazia");
         }
         Node temp = head; // cria uma variavel temporaria para deletar a cabeça atual pelo garbage collector
+        System.out.println(temp.data+" foi removido");
         head = head.next;
 
     }
 
     public void show(){
         Node temp = head;
+        System.out.print("[ ");
         while(temp != null){
-            System.out.println(temp.data);
+            System.out.print(temp.data+" ");
             temp = temp.next;
         }
+        System.out.println("]");
     }
     
 
